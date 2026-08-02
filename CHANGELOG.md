@@ -10,6 +10,12 @@ All notable changes to Forte are documented here. The project follows
 - More verified SLEIGH p-code mappings
 - Redistributable mixed-mode ELF fixtures
 
+## [0.1.1] - 2026-08-02
+
+### Changed
+
+- Allow the tested pypcode 3.x series while retaining Python 3.10 support
+
 ## [0.1.0] - 2026-08-02
 
 ### Added

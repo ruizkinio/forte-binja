@@ -9,7 +9,7 @@ def test_plugin_manifest_is_valid_json():
     assert manifest["pluginmetadataversion"] == 2
     assert "architecture" in manifest["type"]
     assert manifest["api"] == ["python3"]
-    assert manifest["dependencies"]["pip"] == ["pypcode>=2.0.0,<3"]
+    assert manifest["dependencies"]["pip"] == ["pypcode>=2.0.0,<4"]
 
 
 def test_required_public_repository_files_exist():

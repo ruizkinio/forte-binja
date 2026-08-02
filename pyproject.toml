@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "forte-binja"
-version = "0.1.0"
+version = "0.1.1"
 description = "MIPS16e architecture support for Binary Ninja"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -31,7 +31,7 @@ classifiers = [
   "Topic :: Software Development :: Disassemblers"
 ]
 dependencies = [
-  "pypcode>=2.0.0,<3"
+  "pypcode>=2.0.0,<4"
 ]
 
 [project.optional-dependencies]
