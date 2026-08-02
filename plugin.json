@@ -1,0 +1,36 @@
+{
+  "pluginmetadataversion": 2,
+  "name": "Forte — MIPS16e for Binary Ninja",
+  "type": [
+    "architecture",
+    "helper"
+  ],
+  "api": [
+    "python3"
+  ],
+  "description": "MIPS16e disassembly, mixed-mode ELF routing, and LLIL for Binary Ninja, powered by pypcode.",
+  "longdescription": "Forte adds big- and little-endian MIPS16e support to Binary Ninja. It recognizes the low-bit mode tag used by mixed MIPS32/MIPS16 ELF symbols, decodes 16- and 32-bit compressed instructions, models delay slots without duplicating their side effects, supplies Linux o32 calling conventions, and lifts common SLEIGH p-code operations into Binary Ninja LLIL. Built-in commands seed existing databases, run a decoder self-test, and report LLIL coverage. Forte runs inside Binary Ninja and does not invoke Ghidra or an external disassembler.",
+  "license": {
+    "name": "MIT",
+    "text": "MIT License\n\nCopyright (c) 2026 Sam Ruiz and Forte contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+  },
+  "platforms": [
+    "Darwin",
+    "Linux",
+    "Windows"
+  ],
+  "installinstructions": {
+    "Darwin": "Install through Binary Ninja's Plugin Manager, or clone the repository into ~/Library/Application Support/Binary Ninja/plugins/forte-binja. Binary Ninja installs pypcode from requirements.txt.",
+    "Linux": "Install through Binary Ninja's Plugin Manager, or clone the repository into ~/.binaryninja/plugins/forte-binja. Binary Ninja installs pypcode from requirements.txt.",
+    "Windows": "Install through Binary Ninja's Plugin Manager, or clone the repository into %APPDATA%\\Binary Ninja\\plugins\\forte-binja. Binary Ninja installs pypcode from requirements.txt."
+  },
+  "dependencies": {
+    "pip": [
+      "pypcode>=2.0.0,<3"
+    ]
+  },
+  "version": "0.1.0",
+  "author": "Sam Ruiz and contributors",
+  "minimumbinaryninjaversion": 4000,
+  "url": "https://github.com/ruizkinio/forte-binja"
+}

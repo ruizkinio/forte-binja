@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.bndb
+*.bnpr
+*.log
+.DS_Store
+.pytest_cache/
+.ruff_cache/
+.venv/
+build/
+dist/
+*.egg-info/
+
+# Firmware and analysis databases do not belong in the public repository.
+firmware/
+samples/private/

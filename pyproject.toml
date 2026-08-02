@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "forte-binja"
+version = "0.1.0"
+description = "MIPS16e architecture support for Binary Ninja"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Sam Ruiz" }
+]
+keywords = [
+  "binary-ninja",
+  "firmware",
+  "mips",
+  "mips16",
+  "reverse-engineering"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: MacOS",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Topic :: Security",
+  "Topic :: Software Development :: Disassemblers"
+]
+dependencies = [
+  "pypcode>=2.0.0,<3"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0,<10",
+  "ruff>=0.11,<1"
+]
+
+[tool.setuptools.packages.find]
+include = ["forte*"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

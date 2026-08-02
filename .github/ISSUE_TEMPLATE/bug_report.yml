@@ -1,0 +1,62 @@
+name: Bug report
+description: Report incorrect MIPS16e decoding, control flow, or LLIL.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Forte. Do not attach private firmware,
+        credentials, or Binary Ninja databases.
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Forte, Binary Ninja, operating system, and Python versions.
+      placeholder: Forte 0.1.0; Binary Ninja 5.x; macOS; Python 3.10
+    validations:
+      required: true
+  - type: dropdown
+    id: endian
+    attributes:
+      label: Endianness
+      options:
+        - Big endian
+        - Little endian
+        - Unknown
+    validations:
+      required: true
+  - type: input
+    id: address
+    attributes:
+      label: Load address
+      placeholder: "0x00401c94"
+  - type: textarea
+    id: bytes
+    attributes:
+      label: Minimal redistributable byte sequence
+      description: Include delay-slot bytes when relevant.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and Forte log output
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I ran Forte's decoder self-test.
+          required: true
+        - label: This report contains no credentials or private binaries.
+          required: true
